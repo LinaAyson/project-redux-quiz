@@ -4,16 +4,51 @@ import { createSlice } from "@reduxjs/toolkit";
 const questions = [
   {
     id: 1,
-    questionText: "Who set the Olympic record for the 100m dash in 2012?",
-    options: ["Usain Bolt", "Justin Gatlin", "Tyson Gay", "Asafa Powell"],
-    correctAnswerIndex: 0
+    questionText: "How do orangutans build their nests in the treetops?",
+    options: ["They order treehouse kits online", "Meticulously weaving branches together", "Hire a team of monkey architects"],
+    correctAnswerIndex: 1
   },
   {
     id: 2,
     questionText:
-      "When was Michael Phelps last named male World Swimmer of the Year?",
-    options: ["2012", "2014", "2016", "2018"],
+      "Howler monkeys are often heard in the jungle. What's the primary reason for their vocal performances?",
+    options: [" Morning choir practice", "Communicating with distant relatives", "Expressing their love for jungle karaoke nights"],
+    correctAnswerIndex: 1
+  },
+  {
+    id: 3,
+    questionText:
+      "Which bird, known for its vibrant plumage, is often considered the 'king of the jungle'?",
+    options: ["Parrot", "Toucan", "Peacock", ""],
+    correctAnswerIndex: 1
+  },
+  {
+    id: 4,
+    questionText:
+      "What technique do jaguars often use when hunting in the jungle?",
+    options: ["Stalking and ambush", "Loud roars to scare prey", "Attracts prey with sound"],
+    correctAnswerIndex: 0
+  },
+  {
+    id: 5,
+    questionText:
+      "Gorillas are known for living in close-knit social groups. What is the term commonly used to describe these family units?",
+    options: ["A Congregation", "A Troop", "A Band"],
+    correctAnswerIndex: 1
+  },
+  {
+    id: 5,
+    questionText:
+      "What colorful bird, often associated with Nicaragua, is known for its vibrant plumage and is the national bird of the country?",
+    options: ["Keel-billed Toucan", "Scarlet Macaw", "Turquoise-browed motmot"],
     correctAnswerIndex: 2
+  },
+  {
+    id: 6,
+    questionText:
+      "What does gorillas mainly eat?",
+    options: ["Meat from smaller monkeys", "Plantbased-diet", "Bamboo"],
+    correctAnswerIndex: 1
   }
 ];
 
