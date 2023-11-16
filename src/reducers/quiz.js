@@ -5,21 +5,24 @@ const questions = [
   {
     id: 1,
     questionText: "How do orangutans build their nests in the treetops?",
-    options: ["They order treehouse kits online", "Meticulously weaving branches together", "Hire a team of monkey architects"],
-    correctAnswerIndex: 1
+    options: ["They let the younger orangutans do it", "Meticulously weaving branches together", "Hire a team of monkey architects"],
+    correctAnswerIndex: 1,
+    image: "https://images.unsplash.com/photo-1612368195523-19e00a05b1cf?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 2,
     questionText:
       "Howler monkeys are often heard in the jungle. What's the primary reason for their vocal performances?",
     options: [" Morning choir practice", "Communicating with distant relatives", "Expressing their love for jungle karaoke nights"],
-    correctAnswerIndex: 1
+    correctAnswerIndex: 1,
+    videoUrl: "https://youtu.be/RA2wWjhHPwU?si=iy6B6SQuo18gtRAL"
+
   },
   {
     id: 3,
     questionText:
-      "Which bird, known for its vibrant plumage, is often considered the 'king of the jungle'?",
-    options: ["Parrot", "Toucan", "Peacock", ""],
+      "Which bird is known for its large, colorful bill that can make up a third of its total body length?",
+    options: ["Parrot", "Toucan", "Peacock"],
     correctAnswerIndex: 1
   },
   {
@@ -27,28 +30,32 @@ const questions = [
     questionText:
       "What technique do jaguars often use when hunting in the jungle?",
     options: ["Stalking and ambush", "Loud roars to scare prey", "Attracts prey with sound"],
-    correctAnswerIndex: 0
+    correctAnswerIndex: 0,
+    image: "https://images.unsplash.com/photo-1616128417743-c3a6992a65e7?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 5,
     questionText:
       "Gorillas are known for living in close-knit social groups. What is the term commonly used to describe these family units?",
     options: ["A Congregation", "A Troop", "A Band"],
-    correctAnswerIndex: 1
-  },
-  {
-    id: 5,
-    questionText:
-      "What colorful bird, often associated with Nicaragua, is known for its vibrant plumage and is the national bird of the country?",
-    options: ["Keel-billed Toucan", "Scarlet Macaw", "Turquoise-browed motmot"],
-    correctAnswerIndex: 2
+    correctAnswerIndex: 1,
+    image: "https://images.unsplash.com/photo-1566926889583-b2b646730d6a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 6,
     questionText:
+      "What colorful bird, often associated with Nicaragua, is known for its vibrant plumage and is the national bird of the country?",
+    options: ["Keel-billed Toucan", "Scarlet Macaw", "Turquoise-browed motmot"],
+    correctAnswerIndex: 2,
+    image: "https://images.unsplash.com/photo-1680003598971-870d3a43280f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: 7,
+    questionText:
       "What does gorillas mainly eat?",
     options: ["Meat from smaller monkeys", "Plantbased-diet", "Bamboo"],
-    correctAnswerIndex: 1
+    correctAnswerIndex: 1,
+    image: "https://www.nyungweforestnationalpark.org/wp-content/uploads/2020/02/Mountain-Gorilla-Diet.jpg"
   }
 ];
 
@@ -63,6 +70,7 @@ export const quiz = createSlice({
   name: "quiz",
   initialState,
   reducers: {
+
     /**
      * Use this action when a user selects an answer to the question.
      * The answer will be stored in the `quiz.answers` state with the
@@ -78,6 +86,7 @@ export const quiz = createSlice({
      * When dispatching this action, you should pass an object as the payload with `questionId`
      * and `answerIndex` keys. See the readme for more details.
      */
+
     submitAnswer: (state, action) => {
       const { questionId, answerIndex } = action.payload;
       const question = state.questions.find((q) => q.id === questionId);

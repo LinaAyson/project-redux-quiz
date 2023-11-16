@@ -1,54 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap");
 .main-container {
   display: flex;
-  flex-direction: column; /* or row, depending on your design */
-  justify-content: center; /* vertically align items in the center */
-  align-items: stretch; /* horizontally align items in the center */
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   margin-top: 50px;
   padding: 60px;
-
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(220 255 218 / 53%);
+}
+@media screen and (max-width: 468px) {
+  .main-container {
+    padding-top: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .header {
   font-family: "Alumni Sans Inline One", sans-serif;
   font-size: 6rem;
   text-align: center;
-  animation: shake 3s ease-in-out infinite; /* Adjust the duration and easing as needed */
+  animation: tilt-n-move-shaking 3s cubic-bezier(0.35, 0.32, 0.69, 0.83)
+    infinite;
   animation-delay: 3s;
-  color: green;
+  color: #023e30;
 }
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
+@keyframes tilt-n-move-shaking {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
   }
-  25%,
-  75% {
-    transform: translateX(-2px);
+  25% {
+    transform: translate(5px, 5px) rotate(5deg);
   }
   50% {
-    transform: translateX(7px);
+    transform: translate(0, 0) rotate(0eg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .header {
+    font-size: 5rem;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
   }
 }
 
 .question h1 {
   color: black;
-  background-color: #9bd89b;
+  background-color: #204026;
+  color: #f3fff3;
   border-radius: 1rem;
-  padding: 0.5rem;
+  padding: 20px;
   font-weight: lighter;
   text-align: center;
+}
+
+/* Media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  .question h1 {
+    font-size: 24px;
+  }
+}
+
+.question-state {
+  font-size: small;
+  font-family: ;
+}
+
+.question-image {
+  display: flex;
+  justify-content: center;
+}
+
+.question-image-img {
+  width: 15rem;
+  height: 12rem;
+}
+
+.youtube-video {
+  display: flex;
+  justify-content: center;
+}
+
+.answer ul {
+  padding: 0;
 }
 
 .answer-option {
   list-style: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 20px;
   margin: 5px;
-  border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
+  border: 2px solid #142918;
+  font-size: 20px;
+  /* max-width: 600px;  */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 800px) and (max-width: 2140px) {
+  .answer-option {
+    max-width: 800px;
+  }
 }
 
 .answer-option:hover {
@@ -57,15 +117,57 @@
 
 /* Stilar för valt korrekt svar */
 .answer-option.correct.selected {
-  background-color: green;
+  background-color: #b0e9ad;
 }
 
 /* Stilar för valt felaktigt svar */
 .answer-option.wrong.selected {
-  background-color: red;
+  background-color: #e73c27;
 }
 
 /* Stilar för korrekt svar när felaktigt svar är valt */
 .answer-option.correct.correct-selected {
-  background-color: yellow;
+  background-color: #e3e084;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.question-summary {
+  background-color: rgb(253 253 253 / 78%);
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.question-summary h2 {
+  padding: 10px;
+  font-weight: lighter;
+  text-align: center;
+  margin: 1rem;
+}
+
+.question-correct {
+  border-radius: 2px;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.restart-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.question-summary button {
+  background-color: #fffb8e;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1.5rem;
+  font-family: "Alumni Sans Inline One", sans-serif;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+.question-summary button:hover {
+  background-color: #fffca7;
 }
