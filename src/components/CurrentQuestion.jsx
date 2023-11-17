@@ -75,7 +75,6 @@ export const CurrentQuestion = () => {
           <div className="question">
             <h1>{question.questionText}</h1>
           </div>{" "}
-          <h2 className="">Answer:</h2>
           <div className="answer">
             <ul>
               {question.options.map((option, index) => (
@@ -102,6 +101,15 @@ export const CurrentQuestion = () => {
                 </li>
               ))}
             </ul>
+            <div className="question-image">
+              {question.image && (
+                <img
+                  src={question.image}
+                  className="question-image-img"
+                  alt={`Question ${question.id}`}
+                />
+              )}
+            </div>
             {selectedAnswerIndex !== undefined && (
               <p className={isCorrect ? "correct-answer" : "wrong-answer"}></p>
             )}
@@ -120,15 +128,6 @@ export const CurrentQuestion = () => {
               ></iframe>
             </div>
           )}
-          <div className="question-image">
-            {question.image && (
-              <img
-                src={question.image}
-                className="question-image-img"
-                alt={`Question ${question.id}`}
-              />
-            )}
-          </div>
         </>
       )}
     </div>

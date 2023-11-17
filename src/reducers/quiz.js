@@ -7,7 +7,7 @@ const questions = [
     questionText: "How do orangutans build their nests in the treetops?",
     options: ["They let the younger orangutans do it", "Meticulously weaving branches together", "Hire a team of monkey architects"],
     correctAnswerIndex: 1,
-    image: "https://images.unsplash.com/photo-1612368195523-19e00a05b1cf?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://images.unsplash.com/photo-1549793786-6c0ad4e98a50?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 2,
@@ -23,7 +23,8 @@ const questions = [
     questionText:
       "Which bird is known for its large, colorful bill that can make up a third of its total body length?",
     options: ["Parrot", "Toucan", "Peacock"],
-    correctAnswerIndex: 1
+    correctAnswerIndex: 1,
+    image: "https://images.unsplash.com/photo-1588715703712-2a8d1b0c9619?q=80&w=1416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 4,
@@ -31,7 +32,7 @@ const questions = [
       "What technique do jaguars often use when hunting in the jungle?",
     options: ["Stalking and ambush", "Loud roars to scare prey", "Attracts prey with sound"],
     correctAnswerIndex: 0,
-    image: "https://images.unsplash.com/photo-1616128417743-c3a6992a65e7?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://images.unsplash.com/photo-1604994956900-de0daaf2d17f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 5,
@@ -39,7 +40,7 @@ const questions = [
       "Gorillas are known for living in close-knit social groups. What is the term commonly used to describe these family units?",
     options: ["A Congregation", "A Troop", "A Band"],
     correctAnswerIndex: 1,
-    image: "https://images.unsplash.com/photo-1566926889583-b2b646730d6a?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://images.unsplash.com/photo-1536327327725-804520febf13?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 6,
