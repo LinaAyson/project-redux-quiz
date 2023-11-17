@@ -6,7 +6,6 @@
   align-items: stretch;
   margin-top: 50px;
   padding: 60px;
-  background-color: rgb(220 255 218 / 53%);
 }
 @media screen and (max-width: 468px) {
   .main-container {
@@ -23,8 +22,10 @@
   animation: tilt-n-move-shaking 3s cubic-bezier(0.35, 0.32, 0.69, 0.83)
     infinite;
   animation-delay: 3s;
-  color: #023e30;
+  color: #e9bb41b3;
+  text-shadow: 3px 3px 1px black;
 }
+
 @keyframes tilt-n-move-shaking {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -60,6 +61,11 @@
   text-align: center;
 }
 
+h2 {
+  color: #ffb900;
+  text-shadow: 3px 2px 2px #000000;
+}
+
 /* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
   .question h1 {
@@ -69,7 +75,7 @@
 
 .question-state {
   font-size: small;
-  font-family: ;
+  color: #e9bb41b3;
 }
 
 .question-image {
@@ -132,9 +138,10 @@
 }
 
 .question-summary {
-  background-color: rgb(253 253 253 / 78%);
+  background-color: rgb(4 4 4 / 49%);
   margin: 2rem;
   padding: 2rem;
+  color: #e0e0e0;
 }
 
 .question-summary h2 {
@@ -147,7 +154,9 @@
 .question-correct {
   border-radius: 2px;
   padding: 8px;
-  font-size: 28px;
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 2px 2px 1px #000000;
 }
 
 .restart-btn {
